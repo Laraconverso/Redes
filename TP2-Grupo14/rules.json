@@ -1,0 +1,32 @@
+{
+    "reglas": [
+        {
+            "name": "Block HTTP (destination port 80)",
+            "puerto_destino": 80
+        },
+        {
+            "name": "Block UDP from host1 to port 5001",
+            "protocolo": "udp",
+            "ip_origen": "10.0.0.1",
+            "puerto_destino": 5001
+        },
+        {
+            "name": "Block communication between host2 and host4",
+            "ip_origen": "10.0.0.2",
+            "ip_destino": "10.0.0.4"
+        },
+        {
+            "name": "Block reverse communication between host4 and host2",
+            "ip_origen": "10.0.0.4",
+            "ip_destino": "10.0.0.2"
+        }, 
+        {
+            "name": "Block MAC origen host1 (00:00:00:00:00:10)", 
+            "mac_origen": "00:00:00:00:00:10"
+        }, 
+        {
+            "name": "Block origin port 22",
+            "puerto_origen": 22
+        }
+    ]
+}
